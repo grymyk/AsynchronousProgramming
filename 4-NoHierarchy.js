@@ -1,6 +1,7 @@
 // Back to order, callback hierarchy
 
 let data = {};
+
 readConfig();
 
 // Emulate Asynchronous calls

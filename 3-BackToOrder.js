@@ -1,12 +1,11 @@
 // Back to order, callback hierarchy
 
 readConfig('myConfig', () => {
-  selectFromDb('select * from cities', () => {
-    getHttpPage('http://kpi.ua', () => {
-      readFile('README.md', () => {
-      });
-    });
-  });
+	selectFromDb('select * from cities', () => {
+		getHttpPage('http://kpi.ua', () => {
+			readFile('README.md', () => {});
+		});
+	});
 });
 
 // Emulate Asynchronous calls

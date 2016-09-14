@@ -1,9 +1,16 @@
 // Sequentian calls and sequentian execution
 
-readConfig('myConfig', () => {});
-selectFromDb('select * from cities', () => {});
-getHttpPage('http://kpi.ua', () => {});
-readFile('README.md', () => {});
+readConfig('myConfig', console.log);
+
+selectFromDb('select * from cities', (data) => {
+	data.forEach( (value) => {
+		console.log(value)
+	});
+});
+
+getHttpPage('http://kpi.ua', console.log);
+
+readFile('README.md', console.log);
 
 // Pseudo-Asynchronous Functions
 // having just callbacks but working synchronously
@@ -27,3 +34,4 @@ function readFile(path, callback) {
   console.log('(4) Readme file loaded');
   callback('file content');
 }
+
