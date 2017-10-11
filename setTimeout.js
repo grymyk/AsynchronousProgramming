@@ -45,6 +45,7 @@ api.add = function add(max, callback) {
 		callback(api.array);
 
 		clearTimeout(api.timer);
+		api.array = [];
     }
 };
 
